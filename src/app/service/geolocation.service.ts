@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class GeolocationService {
   private baseURL = "http://api.openweathermap.org/geo/1.0/direct?";
-  private apiKey = "8f9b48d9034d3bd4f6113bc7fe7885f3";
+  private apiKey = "";
 
   constructor(private http:HttpClient) { }
 // decleared the query and taking the value from the search
