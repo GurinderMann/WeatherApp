@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "hofodoro@mailinator.com",
+      "password": "$2a$10$iXfdq2qkvB6izmS2TfDry.sCD12Av50H6lCt3muQ9RRHzrnWKmpE2",
+      "username": "Reprehenderit dolor ",
+      "id": 1
+    },
+    {
+      "email": "qocesod@mailinator.com",
+      "password": "$2a$10$7Op0XfdwlMj5a7DBWGMCuemFRT4LCiwSrA1ldd2vCjLfe9ELgEidW",
+      "username": "Beatae est vero ess",
+      "id": 2
+    },
+    {
+      "email": "fimoxihof@mailinator.com",
+      "password": "$2a$10$xy65JC4pPBiXgwM1pyYk0.GZ0NQKsHvSZqVPNjceLK6hv5NcWyzDu",
+      "username": "Sit consequatur Mo",
+      "id": 3
+    },
+    {
+      "email": "nafihotur@mailinator.com",
+      "password": "$2a$10$WzTRCPgAOHRk0/iD94yq0eHe07K7hi67oQUF98CITf4Z81.CDRMWS",
+      "username": "Provident et labore",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+.card{
+  background-color: transparent;
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.49);
+  border-radius: 40px;
+
+}
+#search{
+  background-color:#20acc288;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.49);
+  border-radius: 60px;
+  border: none;
+
+
+}
+form{
+  margin-top: 50px;
+  button{
+    background-color:#20acc288;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.49);
+   border-radius: 30px;
+   border: none;
+  }
+}
+
+
+
+#user {
+    margin-right: 20px;
+    border-radius: 50px;
+    background-color:#20acc288;
+    border: none;
+  }
+
+#fav{
+  background-color: #9df9ef;
+}
+
+#weather{
+   width: 50%;
+}

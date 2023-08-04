@@ -1,0 +1,91 @@
+<!-- Registration Form -->
+<div class="container-fluid w-100">
+  <form
+    [formGroup]="myForm"
+    class="d-flex flex-column justify-content-center align-items-center w-25 mx-auto mt-3"
+  >
+    <input
+      type="text"
+      required
+      formControlName="nome"
+      placeholder="Name"
+      class="my-3 form-control"
+    />
+    <input
+      type="text"
+      required
+      formControlName="cognome"
+      placeholder="Surname"
+      class="my-3 form-control"
+    />
+    <input
+      type="email"
+      required
+      formControlName="email"
+      placeholder="Email"
+      class="my-3 form-control"
+    />
+    <input
+      type="password"
+      required
+      formControlName="password"
+      placeholder="Password"
+      class="my-3 form-control"
+    />
+    <input
+      type="password"
+      required
+      formControlName="passVerify"
+      placeholder="Confirm password"
+      class="my-3 form-control"
+    />
+
+    <select formControlName="genere" class="form-control">
+      <option value="">Genere</option>
+      <option value="uomo">Uomo</option>
+      <option value="donna">Donna</option>
+      <option value="altro">Altro</option>
+    </select>
+
+    <input
+      type="file"
+      required
+      formControlName="profile"
+      class="my-3 form-control"
+    />
+    <input
+      type="textarea"
+      formControlName="bio"
+      class="my-3 form-control"
+      placeholder="bio"
+    />
+    <input
+      type="text"
+      required
+      formControlName="username"
+      class="my-3 form-control"
+      placeholder="username"
+    />
+
+    <div>
+      <!-- button for the submit of the form -->
+      <button class="btn" type="button" id="submit" (click)="submit()">
+        Submit
+      </button>
+
+      <!-- button for the login -->
+      <button
+        id="login"
+        class="btn text-black ms-3"
+        type="button"
+        (click)="toLoginPage()"
+      >
+        Login
+      </button>
+    </div>
+    <!-- div for the success message  -->
+    <div *ngIf="successMessage" class="alert alert-success mt-5" role="alert">
+      {{ successMessage }}
+    </div>
+  </form>
+</div>

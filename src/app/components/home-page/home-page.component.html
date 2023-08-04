@@ -1,0 +1,69 @@
+<!-- button for login  -->
+<div class="d-flex justify-content-end mt-3">
+  <button
+    id="user"
+    type="button"
+    class="btn btn-primary"
+    (click)="toLoginPage()"
+  >
+    {{ loggedInUserName || "User" }}
+  </button>
+</div>
+
+<div class="container">
+  <h1 class="text-center mb-3 mt-3 fs-1">{{ title }}</h1>
+  <!-- search bar form -->
+  <form class="d-flex w-50 mx-auto" role="search" (ngSubmit)="searchLocation()">
+    <input
+      id="search"
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      [(ngModel)]="searchQuery"
+      name="searchQuery"
+    />
+    <button class="btn btn-outline-dark" type="submit">Search</button>
+  </form>
+  <!-- div for genereting the card only if there is a wheather data -->
+  <div *ngIf="weatherData">
+    <div class="card mt-5 w-25 mx-auto text-center">
+      <div class="d-flex justify-content-center w-100 align-items-center">
+        <img
+          [src]="getWeatherIconUrl(weatherData.weather[0].icon)"
+          alt="Weather Icon"
+          class="card-img-top"
+          id="weather"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fs-3 fw-bold">
+          Weather in {{ weatherData.name }}, {{ weatherData.sys.country }}
+        </h5>
+        <p class="card-text fs-3 fw-bold">{{ weatherData.weather[0].main }}</p>
+        <p class="card-text">
+          Temperature: {{ roundTemperature(weatherData.main.temp) }} °C
+        </p>
+        <p class="card-text">Clouds: {{ weatherData.clouds.all }}%</p>
+        <p class="card-text">Wind Speed: {{ weatherData.wind.speed }} m/s</p>
+        <div class="d-flex w-100 justify-content-center">
+          <button
+            id="fav"
+            class="btn w-50 rounded-5"
+            (click)="addToFavorites(weatherData.name)"
+          >
+            Add to Fav
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- a div to show the error in case u are not logged in -->
+  <div
+    *ngIf="addToFavoritesError"
+    class="alert alert-danger mt-3 w-50 mx-auto"
+    role="alert"
+  >
+    {{ addToFavoritesError }}
+  </div>
+</div>
